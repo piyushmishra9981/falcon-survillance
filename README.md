@@ -38,45 +38,26 @@
 
 > A production website designed for a real security and surveillance business.
 
+<!-- Main Banner -->
 <p align="center">
-  <img
-    src="https://falconsurveillance.in/assets/images/home-one/cctv_surveillance_hero.jpg"
-    alt="Falcon Surveillance Homepage"
-    width="100%"
-  />
+  <img src="https://github.com/user-attachments/assets/ae641356-dace-4a60-8a4f-03b08c2019cb" width="90%" alt="Falcon Surveillance Homepage Preview" />
 </p>
 
-<br>
-
 ### 🖥️ Homepage
-
 <p align="center">
-  <img
-    src="<img width="702" height="1600" alt="home" src="https://github.com/user-attachments/assets/ae641356-dace-4a60-8a4f-03b08c2019cb" />"
-    alt="Falcon Surveillance Homepage Preview"
-    width="90%"
-  />
+  <img src="https://github.com/user-attachments/assets/ae641356-dace-4a60-8a4f-03b08c2019cb" width="90%" alt="Homepage Preview" />
 </p>
 
 ### 📹 CCTV & Surveillance
-
 <p align="center">
-  <img
-    src="<img width="702" height="1600" alt="cctv" src="https://github.com/user-attachments/assets/0b6001ee-bd47-4e91-b77c-2577228cc666" />"
-    alt="CCTV Surveillance Solutions"
-    width="90%"
-  />
+  <img src="https://github.com/user-attachments/assets/0b6001ee-bd47-4e91-b77c-2577228cc666" width="90%" alt="CCTV Solutions" />
 </p>
 
-###  GPS & Fleet Tracking
-
+### 🛰️ GPS & Fleet Tracking
 <p align="center">
-  <img
-    src="<img width="702" height="1600" alt="gps" src="https://github.com/user-attachments/assets/4db3a01f-2357-4f3c-a4fc-ea3c6a596e07" />"
-    alt="GPS Vehicle Tracking and Fleet Management"
-    width="90%"
-  />
+  <img src="https://github.com/user-attachments/assets/4db3a01f-2357-4f3c-a4fc-ea3c6a596e07" width="90%" alt="GPS Vehicle Tracking" />
 </p>
+
 
 <!--
 OPTIONAL:
