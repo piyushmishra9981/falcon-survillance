@@ -1,0 +1,707 @@
+/*====================================================
+ FALCON SURVEILLANCE PREMIUM HEADER
+ PART 1A
+====================================================*/
+
+.site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+
+    background:#ffffff;
+
+    border-bottom:1px solid rgba(0,0,0,.06);
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.06);
+
+    transition:.35s ease;
+}
+
+.site-header.scrolled{
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(16px);
+
+    -webkit-backdrop-filter:blur(16px);
+
+    box-shadow:
+    0 14px 40px rgba(0,0,0,.10);
+
+}
+
+.floating-contact-group {
+    position: fixed;
+    top: 94px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem; /* spacing between buttons */
+    pointer-events: auto;
+    max-width: calc(100vw - 1.5rem);
+    width: max-content;
+    transition: top 0.35s ease;
+}
+
+.floating-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 0.72rem 1.25rem;
+    min-height: 46px;
+    border-radius: 999px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: auto;
+    overflow: hidden;
+}
+
+/* Call Now Button (Blue Gradient) */
+.floating-contact-btn--call {
+    background: linear-gradient(135deg, #0A84FF 0%, #2563EB 100%);
+    box-shadow: 0 14px 30px rgba(10, 132, 255, 0.24);
+}
+
+.floating-contact-btn--call:hover,
+.floating-contact-btn--call:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(10, 132, 255, 0.32);
+    background: linear-gradient(135deg, #3b95ff 0%, #3b82f6 100%);
+}
+
+.floating-contact-btn--call:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 6px 16px rgba(10, 132, 255, 0.16);
+}
+
+/* Email Us Button (Orange Gradient) */
+.floating-contact-btn--email {
+    background: linear-gradient(135deg, #FF9F1C 0%, #FF8C00 100%);
+    box-shadow: 0 14px 30px rgba(255, 140, 0, 0.24);
+}
+
+.floating-contact-btn--email:hover,
+.floating-contact-btn--email:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(255, 140, 0, 0.32);
+    background: linear-gradient(135deg, #FFAA3C 0%, #FFA01C 100%);
+}
+
+.floating-contact-btn--email:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 6px 16px rgba(255, 140, 0, 0.16);
+}
+
+.floating-contact-btn:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 3px;
+}
+
+.floating-contact-btn__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.floating-contact-btn__icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+.floating-contact-btn__text {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.floating-whatsapp-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 11000;
+    width: 56px;
+    height: 56px;
+    min-width: 48px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px 24px 8px 24px;
+    background: linear-gradient(135deg, #29d467 0%, #25d366 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 16px 36px rgba(37, 211, 102, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    pointer-events: auto;
+    overflow: visible;
+    text-decoration: none;
+    isolation: isolate;
+}
+
+.floating-whatsapp-button::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: -6px;
+    width: 16px;
+    height: 16px;
+    background: inherit;
+    border-bottom-left-radius: 10px;
+    transform: rotate(45deg);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: -1;
+}
+
+.floating-whatsapp-button::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+@media (hover: hover) {
+    .floating-whatsapp-button:hover,
+    .floating-whatsapp-button:focus-visible {
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 20px 42px rgba(37, 211, 102, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+        background: linear-gradient(135deg, #2dd96f 0%, #1ebc5d 100%);
+    }
+}
+
+@media (hover: none) {
+    .floating-whatsapp-button:active {
+        transform: scale(0.96);
+        box-shadow: 0 12px 24px rgba(37, 211, 102, 0.24);
+    }
+}
+
+.floating-whatsapp-button:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.9);
+    outline-offset: 4px;
+}
+
+.floating-whatsapp-button__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    position: relative;
+    z-index: 1;
+}
+
+.floating-whatsapp-button__icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/*=========================
+CONTAINER
+=========================*/
+
+.site-header>.container{
+
+max-width:1400px;
+
+margin:auto;
+
+padding:0 28px;
+
+}
+
+.header-container{
+
+height:82px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:35px;
+
+}
+
+
+/*=========================
+LOGO
+=========================*/
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+flex-shrink:0;
+
+text-decoration:none;
+
+}
+
+.logo img{
+
+height:54px;
+
+width:auto;
+
+display:block;
+
+transition:.35s;
+
+}
+
+.logo:hover img{
+
+transform:scale(1.05);
+
+}
+
+
+/*=========================
+NAVIGATION
+=========================*/
+
+.nav{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.nav-menu{
+
+display:flex;
+
+align-items:center;
+
+gap:34px;
+
+list-style:none;
+
+margin:0;
+
+padding:0;
+
+}
+
+.nav-item{
+
+position:relative;
+
+}
+
+.nav-link{
+
+text-decoration:none;
+
+font-size:15px;
+
+font-weight:600;
+
+color:#222;
+
+transition:.3s;
+
+padding:8px 0;
+
+position:relative;
+
+}
+
+.nav-link:hover{
+
+color:#0a63ff;
+
+}
+
+.nav-link::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-6px;
+
+width:0;
+
+height:3px;
+
+background:#0a63ff;
+
+border-radius:50px;
+
+transform:translateX(-50%);
+
+transition:.35s;
+
+}
+
+.nav-link:hover::after{
+
+width:100%;
+
+}
+
+/*=========================
+MEGA MENU
+=========================*/
+
+.has-mega-menu {
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 1rem;
+  width: min(460px, calc(100vw - 2rem));
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: 1000;
+}
+
+.has-mega-menu:hover .mega-menu,
+.has-mega-menu:focus-within .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.mega-menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.mega-menu-column h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mega-menu-column a {
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.35rem 0;
+}
+
+.mega-menu-column a:hover {
+  color: #0056CD;
+  transform: translateX(2px);
+}
+
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:1200px){
+
+.nav-menu{
+
+gap:22px;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.floating-contact-group {
+    top: 84px;
+    gap: 0.6rem;
+}
+
+.floating-contact-btn {
+    padding: 0.66rem 1.1rem;
+    font-size: 0.9rem;
+}
+
+.nav{
+
+display:none;
+
+}
+
+.header-container{
+
+height:72px;
+
+}
+
+.logo img{
+
+height:48px;
+
+}
+
+.site-header>.container{
+
+padding:0 18px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.floating-whatsapp-button {
+    right: 20px;
+    bottom: 20px;
+    width: 54px;
+    height: 54px;
+    border-radius: 22px 22px 8px 22px;
+}
+
+.floating-contact-group {
+    top: 80px;
+    gap: 0.5rem;
+}
+
+.floating-contact-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    gap: 0.55rem;
+}
+
+.header-container{
+
+height:66px;
+
+}
+
+.logo img{
+
+height:42px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.floating-whatsapp-button {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+    border-radius: 20px 20px 8px 20px;
+}
+
+.floating-contact-group {
+    top: 76px;
+    gap: 0.4rem;
+}
+
+.floating-contact-btn {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.8rem;
+    gap: 0.45rem;
+}
+
+.site-header>.container{
+
+padding:0 12px;
+
+}
+
+.logo img{
+
+height:38px;
+
+}
+
+}
+/*====================================================
+ FALCON SURVEILLANCE HEADER
+ PART 1B
+ ACTION BUTTONS
+====================================================*/
+
+.header-actions{
+display:flex;
+align-items:center;
+gap:12px;
+flex-shrink:0;
+}
+
+
+
+/*======================
+HAMBURGER
+=======================*/
+
+.hamburger{
+
+display:none;
+
+width:46px;
+height:46px;
+
+border-radius:12px;
+
+border:1px solid #ececec;
+
+background:#fff;
+
+cursor:pointer;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:5px;
+
+transition:.35s;
+
+}
+
+.hamburger span{
+
+width:22px;
+
+height:2px;
+
+background:#222;
+
+border-radius:50px;
+
+transition:.35s;
+
+}
+
+.hamburger:hover{
+
+background:#0b84ff;
+
+}
+
+.hamburger:hover span{
+
+background:#fff;
+
+}
+
+
+/*======================
+MOBILE MENU
+=======================*/
+
+.mobile-menu{
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+background:rgba(255,255,255,.98);
+backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(16px);
+border-top:1px solid rgba(0,0,0,.06);
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+max-height:0;
+overflow-x:hidden;
+overflow-y:auto;
+opacity:0;
+transition:all .35s ease;
+pointer-events:none;
+}
+
+.mobile-menu.active{
+max-height:calc(100dvh - 88px);
+opacity:1;
+pointer-events:auto;
+}
+
+.mobile-nav-list{
+flex-direction:column;
+align-items:flex-start;
+margin:0;
+padding:18px 0 24px;
+gap:12px;
+}
+
+.mobile-menu-link{
+text-decoration:none;
+color:#111827;
+font-weight:600;
+padding:8px 0;
+display:block;
+transition:.3s;
+}
+
+.mobile-menu-link:hover{
+color:#0a63ff;
+transform:translateX(4px);
+}
+
+
+/*======================
+RESPONSIVE
+=======================*/
+
+@media(max-width:992px){
+  .hamburger{
+    display:flex;
+  }
+}
+
+@media(max-width:480px){
+  .header-actions{
+    gap:8px;
+  }
+
+  .hamburger{
+    width:42px;
+    height:42px;
+  }
+}

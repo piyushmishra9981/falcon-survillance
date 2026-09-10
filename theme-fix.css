@@ -1,0 +1,3 @@
+/* Optional theme fixes (kept minimal). */
+html[data-theme='dark'] .footer-widget .footer-call-content{background-color:#fff;}
+

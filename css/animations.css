@@ -1,0 +1,89 @@
+/* ============================================================
+   FALCON SURVEILLANCE - PERFORMANCE OPTIMIZED ANIMATIONS
+   Minimal fade-only reveal styles for smoother scrolling
+   ============================================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in,
+.animate-fade-in-up,
+.animate-fade-in-down,
+.animate-slide-in-up,
+.animate-slide-in-down,
+.animate-slide-in-left,
+.animate-slide-in-right,
+.animate-scale-in,
+.animate-bounce-in {
+  animation: fadeIn 0.4s ease-out both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.scroll-reveal,
+.scroll-reveal-left,
+.scroll-reveal-right {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.scroll-reveal.revealed,
+.scroll-reveal-left.revealed,
+.scroll-reveal-right.revealed {
+  opacity: 1;
+}
+
+.page-enter {
+  animation: fadeIn 0.4s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-in-up,
+  .animate-fade-in-down,
+  .animate-slide-in-up,
+  .animate-slide-in-down,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-scale-in,
+  .animate-bounce-in,
+  .page-enter,
+  .scroll-reveal,
+  .scroll-reveal-left,
+  .scroll-reveal-right {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ========== PERFORMANCE OPTIMIZATION ========== */
+
+/* Use will-change sparingly for performance-critical animations */
+.will-animate {
+  will-change: transform, opacity;
+}
+
+/* Reset will-change after animation to free resources */
+.animate-fade-in,
+.animate-slide-in-up,
+.animate-scale-in,
+.animate-bounce-in {
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

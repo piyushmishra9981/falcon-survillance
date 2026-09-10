@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0056CD" />
+  <meta name="description" content="Falcon Surveillance Security Blog - Read professional advice, CCTV buying guides, troubleshooting tips, fleet tracking guides, and maintenance tutorials for Shahdol and Madhya Pradesh." />
+  <meta name="keywords" content="security blog Shahdol, CCTV guide MP, vehicle tracking article, troubleshooting camera, fire safety guide" />
+  <meta name="author" content="Falcon Surveillance" />
+  
+  <!-- SEO Crawlability -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://falconsurveillance.in/blog.html" />
+  
+  <!-- Font Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Falcon Surveillance Security Blog | CCTV & GPS Guides" />
+  <meta property="og:description" content="Read professional tutorials, hardware comparisons, local installation guidelines, and security advice for homes, businesses, and fleets." />
+  <meta property="og:url" content="https://falconsurveillance.in/blog.html" />
+  <meta property="og:image" content="https://falconsurveillance.in/assets/images/home-one/cctv_surveillance_system.webp" />
+  <meta property="og:site_name" content="Falcon Surveillance" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Falcon Surveillance Security Blog | CCTV & GPS Guides" />
+  <meta name="twitter:description" content="Read professional tutorials, hardware comparisons, local installation guidelines, and security advice for homes, businesses, and fleets." />
+  <meta name="twitter:image" content="https://falconsurveillance.in/assets/images/home-one/cctv_surveillance_system.webp" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/product.css" />
+
+  <title>Falcon Security Blog | CCTV Guides & Vehicle Tracking telematics</title>
+
+  <!-- Complete JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "@id": "https://falconsurveillance.in/blog.html#blog",
+        "name": "Falcon Surveillance Security Blog",
+        "url": "https://falconsurveillance.in/blog.html",
+        "description": "Expert advice, CCTV buying guides, troubleshooting tips, fleet tracking guides, and maintenance tutorials.",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://falconsurveillance.in/#organization",
+          "name": "Falcon Surveillance",
+          "logo": "https://falconsurveillance.in/assets/images/logos/logo.png"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://falconsurveillance.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://falconsurveillance.in/blog.html"
+          }
+        ]
+      }
+    ]
+  </script>
+
+  <style>
+    /* SVG Icon Base Styles */
+    svg {
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      vertical-align: -0.125em;
+      fill: currentColor;
+    }
+    
+    .blog-card {
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .blog-card-img-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      overflow: hidden;
+      background: #111;
+    }
+
+    .blog-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .blog-card:hover .blog-card-img {
+      transform: scale(1.05);
+    }
+
+    .blog-card-category {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: var(--color-primary);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .blog-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .blog-card-meta {
+      display: flex;
+      gap: 15px;
+      font-size: 0.8rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .blog-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .blog-card-title a {
+      color: var(--color-text-primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .blog-card-title a:hover {
+      color: var(--color-primary);
+    }
+
+    .blog-card-excerpt {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .blog-card-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--color-border);
+      padding-top: 15px;
+      margin-top: auto;
+    }
+
+    .blog-card-author-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--color-border);
+    }
+
+    .blog-card-author-info h5 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .blog-card-author-info p {
+      font-size: 0.75rem;
+      color: var(--color-text-secondary);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .blog-categories-bar {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 15px;
+      margin-bottom: 35px;
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .blog-categories-bar::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+
+    .blog-cat-btn {
+      padding: 10px 20px;
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-secondary);
+      color: var(--color-text-primary);
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .blog-cat-btn:hover,
+    .blog-cat-btn.active {
+      background: var(--color-primary);
+      color: white;
+      border-color: var(--color-primary);
+    }
+  </style>
+</head>
+
+<body>
+  <script src="js/icons.js"></script>
+
+  <!-- ============================================================
+       HEADER & NAVIGATION
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-container">
+        <a href="index.html" class="logo" aria-label="Falcon Surveillance Home">
+          <img src="assets/images/logos/logo.png" alt="Falcon Surveillance Logo" width="162" height="54" />
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item has-mega-menu">
+              <a href="cctv.html" class="nav-link">Products</a>
+              <div class="mega-menu" aria-label="Products menu">
+                <div class="mega-menu-column">
+                  <h3>Security Systems</h3>
+                  <a href="cctv.html">CCTV Cameras</a>
+                  <a href="gps.html">GPS Trackers</a>
+                  <a href="cctv.html#products">Premium Kits</a>
+                </div>
+                <div class="mega-menu-column">
+                  <h3>Business Support</h3>
+                  <a href="index.html#services">Installation</a>
+                  <a href="index.html#projects">Case Studies</a>
+                  <a href="index.html#contact">Request Quote</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="index.html#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+            <li class="nav-item"><a href="index.html#faq" class="nav-link">FAQ</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="hamburger" data-hamburger aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" data-mobile-menu>
+      <div class="container">
+        <nav aria-label="Mobile navigation">
+          <ul class="nav-menu mobile-nav-list">
+            <li class="mobile-menu-item"><a href="index.html#hero" class="mobile-menu-link" data-mobile-menu-link>Home</a></li>
+            <li class="mobile-menu-item"><a href="index.html#products" class="mobile-menu-link" data-mobile-menu-link>Products</a></li>
+            <li class="mobile-menu-item"><a href="cctv.html" class="mobile-menu-link" data-mobile-menu-link>CCTV Cameras</a></li>
+            <li class="mobile-menu-item"><a href="gps.html" class="mobile-menu-link" data-mobile-menu-link>GPS Trackers</a></li>
+            <li class="mobile-menu-item"><a href="index.html#about" class="mobile-menu-link" data-mobile-menu-link>About</a></li>
+            <li class="mobile-menu-item"><a href="index.html#services" class="mobile-menu-link" data-mobile-menu-link>Services</a></li>
+            <li class="mobile-menu-item"><a href="index.html#projects" class="mobile-menu-link" data-mobile-menu-link>Projects</a></li>
+            <li class="mobile-menu-item"><a href="index.html#faq" class="mobile-menu-link" data-mobile-menu-link>FAQ</a></li>
+            <li class="mobile-menu-item"><a href="index.html#contact" class="mobile-menu-link" data-mobile-menu-link>Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 80px;">
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="section-hero" style="padding: 60px 0; background: linear-gradient(135deg, #09132c 0%, #00123a 100%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 250px;">
+      <div class="hero-bg-glow"></div>
+      <div class="container" style="text-align: center; position: relative; z-index: 2;">
+        <h1 style="color: white; font-size: 2.8rem; font-weight: 800; margin-bottom: 12px; line-height: 1.2;">Security Insights & Guides</h1>
+        <p style="color: rgba(255, 255, 255, 0.85); max-width: 600px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">Stay informed with professional advice, CCTV installation tutorials, vehicle tracking benefits, and local MP safety checklists.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BLOG CATALOG & SEARCH
+         ============================================================ -->
+    <section class="section-products" style="padding: 60px 0; background: var(--color-bg-primary);">
+      <div class="container">
+        <!-- Search & Filter bar -->
+        <div class="filter-panel" style="display: flex; gap: 15px; margin-bottom: 35px; flex-wrap: wrap; align-items: center;">
+          <!-- Search Box -->
+          <div class="search-container" style="flex: 2; min-width: 250px; position: relative;">
+            <input type="text" class="search-box" id="blog-search-box" placeholder="Search security articles, troubleshooting..." style="width: 100%; padding: 14px 20px; border-radius: 12px; border: 1px solid var(--color-border); background: var(--color-bg-secondary); color: var(--color-text-primary); font-family: inherit; font-size: 0.95rem; outline: none; transition: border-color 0.2s;" />
+          </div>
+        </div>
+
+        <!-- Categories Bar -->
+        <div class="blog-categories-bar" id="blog-categories-container">
+          <!-- Rendered dynamically by JS -->
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid" id="blog-grid-container">
+          <!-- Rendered dynamically by JS -->
+        </div>
+
+        <div id="no-blogs-found" style="display: none; text-align: center; padding: 60px 20px; background: var(--color-bg-secondary); border-radius: var(--radius-2xl); border: 1px dashed var(--color-border); margin-bottom: 50px;">
+          <h3 style="margin-bottom: 10px; font-weight: 700; font-size: 1.2rem;">No Articles Match Your Search</h3>
+          <p style="color: var(--color-text-secondary); max-width: 450px; margin: 0 auto;">Try clearing some search terms or choosing a different category to browse our security library.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>Falcon Surveillance</h3>
+            <p>Premium CCTV, GPS, and smart security systems for homes, businesses, fleets, and institutions in Shahdol and nearby regions.</p>
+            <div class="footer-socials">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="icon-inline"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3H13.5V4.7c0-.9.3-1.5 1.6-1.5h1.7V.1C16.2.1 15.2 0 14 0c-2.4 0-4 1.5-4 4.2v2.8H7.3v3h2.7v8h3.5Z"></path></svg></span></a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="icon-inline"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5.2A4.8 4.8 0 1 0 16.8 12 4.8 4.8 0 0 0 12 7.2Zm6.2-1.7a1.2 1.2 0 1 0 1.2 1.2 1.2 1.2 0 0 0-1.2-1.2Z"></path></svg></span></a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span class="icon-inline"><svg viewBox="0 0 24 24"><path d="M6.94 8.5A1.56 1.56 0 1 0 6.94 5.38a1.56 1.56 0 0 0 0 3.12ZM5.5 9.5h2.88V19H5.5Zm4.86 0h2.76v1.3h.04c.38-.73 1.33-1.5 2.74-1.5 2.92 0 3.46 1.92 3.46 4.42V19h-2.88v-8.1c0-1.93-.03-4.41-2.69-4.41-2.69 0-3.1 2.1-3.1 4.27V19H10.36Z"></path></svg></span></a>
+              <a href="https://wa.me/7049345854" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="icon-inline"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.67-1.61-.93-2.21-.24-.58-.48-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-.14.24-.7.24-1.29.17-1.41-.08-.12-.27-.2-.57-.35Z"></path></svg></span></a>
+            </div>
+          </div>
+          <div class="footer-links-group" style="flex: 1.5;">
+            <h4>Services</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px;">
+              <a href="cctv-installation.html" style="font-size: 0.9rem;">CCTV Installation</a>
+              <a href="wireless-cctv.html" style="font-size: 0.9rem;">Wireless CCTV</a>
+              <a href="ip-camera.html" style="font-size: 0.9rem;">IP Cameras</a>
+              <a href="fleet-tracking.html" style="font-size: 0.9rem;">Fleet Tracking</a>
+              <a href="biometric-system.html" style="font-size: 0.9rem;">Biometric Systems</a>
+              <a href="fire-alarm.html" style="font-size: 0.9rem;">Fire Alarms</a>
+              <a href="index.html#services" style="font-size: 0.9rem; font-weight: 600;">View All Services</a>
+            </div>
+          </div>
+          <div class="footer-links-group">
+            <h4>Locations</h4>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <a href="shahdol.html" style="font-size: 0.9rem;">Shahdol</a>
+              <a href="sohagpur.html" style="font-size: 0.9rem;">Sohagpur</a>
+              <a href="burhar.html" style="font-size: 0.9rem;">Burhar</a>
+              <a href="beohari.html" style="font-size: 0.9rem;">Beohari</a>
+              <a href="jaisinghnagar.html" style="font-size: 0.9rem;">Jaisinghnagar</a>
+            </div>
+          </div>
+          <div class="footer-links-group">
+            <h4>Contact Us</h4>
+            <a href="tel:+917049345854">Phone: +91 70493 45854</a>
+            <a href="mailto:info@falconsurveillance.in">info@falconsurveillance.in</a>
+            <span>Address: Ward No. 15, IG Bungalow Near Machli Vibhag, Subhash Nagar, Shahdol, MP 484001</span>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Falcon Surveillance. All rights reserved.</span>
+          <div class="footer-bottom-links">
+            <a href="index.html#hero">Home</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#faq">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/blog-posts.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let activeCategory = 'All';
+      let searchQuery = '';
+
+      const categories = ['All', 'Home Security', 'Business Security', 'Fleet Management', 'Buying Guides', 'Troubleshooting', 'Industrial Security'];
+      
+      const renderCategories = () => {
+        const container = document.getElementById('blog-categories-container');
+        if (!container) return;
+        container.innerHTML = categories
+          .map(cat => `<button class="blog-cat-btn ${cat === activeCategory ? 'active' : ''}" data-cat="${cat}">${cat}</button>`)
+          .join('');
+
+        // Attach listeners
+        container.querySelectorAll('.blog-cat-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            activeCategory = e.target.dataset.cat;
+            renderCategories();
+            filterAndRenderPosts();
+          });
+        });
+      };
+
+      const filterAndRenderPosts = () => {
+        const grid = document.getElementById('blog-grid-container');
+        const noBlogs = document.getElementById('no-blogs-found');
+        if (!grid) return;
+
+        let filtered = BLOG_POSTS;
+
+        // Apply Category filter
+        if (activeCategory !== 'All') {
+          filtered = filtered.filter(post => post.category === activeCategory);
+        }
+
+        // Apply Search query
+        if (searchQuery) {
+          filtered = filtered.filter(post => 
+            post.title.toLowerCase().includes(searchQuery) ||
+            post.excerpt.toLowerCase().includes(searchQuery) ||
+            post.category.toLowerCase().includes(searchQuery)
+          );
+        }
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '';
+          noBlogs.style.display = 'block';
+          return;
+        }
+
+        noBlogs.style.display = 'none';
+        grid.innerHTML = filtered
+          .map(post => `
+            <article class="blog-card" data-reveal="up">
+              <div class="blog-card-img-wrapper">
+                <img src="${post.coverImage}" alt="${post.title}" class="blog-card-img" loading="lazy" />
+                <span class="blog-card-category">${post.category}</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span>${post.date}</span>
+                  <span>•</span>
+                  <span>${post.readTime}</span>
+                </div>
+                <h3 class="blog-card-title">
+                  <a href="blog-post.html?id=${post.id}">${post.title}</a>
+                </h3>
+                <p class="blog-card-excerpt">${post.excerpt}</p>
+                <div class="blog-card-author">
+                  <img src="${post.author.image}" alt="${post.author.name}" class="blog-card-author-img" />
+                  <div class="blog-card-author-info">
+                    <h5>${post.author.name}</h5>
+                    <p>${post.author.role}</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          `)
+          .join('');
+      };
+
+      // Search event
+      const searchBox = document.getElementById('blog-search-box');
+      if (searchBox) {
+        searchBox.addEventListener('input', (e) => {
+          searchQuery = e.target.value.toLowerCase().trim();
+          filterAndRenderPosts();
+        });
+      }
+
+      // Initial run
+      renderCategories();
+      filterAndRenderPosts();
+    });
+  </script>
+</body>
+</html>
